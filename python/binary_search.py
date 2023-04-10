@@ -17,3 +17,9 @@ def binary_search(arr: list, target: int) -> int:
 		
 	return -1 #if value none in arr
 
+#sorted array
+arr = [1,3,4,5,6]
+
+#it should return index 3
+result = binary_search(arr, 5)
+print(result)
