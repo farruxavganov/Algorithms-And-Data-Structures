@@ -31,7 +31,7 @@ function findIndex(nums) {
 
 	for(let i = 0; i < nums.length; i++){
 		if(nums[i] < nums[minIndex]){
-			minIndex = i
+			minIndex = i;
 		}
 	}
 
@@ -40,7 +40,7 @@ function findIndex(nums) {
 
 function swapIndex(nums) {
 	let length = nums.length;
-	let newNums = []
+	let newNums = [];
 	for(let i = 0; i < length; i++){
 		let minIndex = findIndex(nums);
 		newNums.push(nums.splice(minIndex, 1)[0]);
