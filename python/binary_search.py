@@ -1,5 +1,5 @@
 #it should return target index if target in arr
-def binary_search(arr: list, target: int) -> int:
+def binary_search(arr: list[int], target: int) -> int:
 	"""Binary search algorithm for int values"""
 	left = 0
 	right = len(arr) - 1

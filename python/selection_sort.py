@@ -1,7 +1,7 @@
 #frist example for selection sort
 
 #it should return min number index in list
-def select(nums: list, start: int) -> int:
+def select(nums: list[int], start: int) -> int:
 	length = len(nums)
 	pos = start
 	for i in range(start, length):
@@ -10,14 +10,14 @@ def select(nums: list, start: int) -> int:
 
 	return pos
 
-def selection_sort(nums: list) -> None:
+def selection_sort(nums: list[int]) -> None:
 	for i in range(len(nums)):
 		pos = select(nums, i)
 		nums[i], nums[pos] = nums[pos], nums[i]
 
 
 #next example for selection sort
-def findIndex(nums: list) -> int:
+def findIndex(nums: list[int]) -> int:
 	length = len(arr)
 	pos = 0
 	for i in range(1, length):
@@ -26,7 +26,7 @@ def findIndex(nums: list) -> int:
 
 	return pos
 
-def selectionSort(nums: list) -> list:
+def selectionSort(nums: list[int]) -> list:
 	newList = []
 
 	for i in range(len(nums)):
