@@ -11,10 +11,6 @@ function quicksort(arr){
 		else
 			right.push(arr[i]);
 	}
-	console.log(left, pivot, right)
 		
 	return [...quicksort(left), pivot, ...quicksort(right)];
 }
-
-let a = [1,2,3,4,5];
-console.log(quicksort(a))
