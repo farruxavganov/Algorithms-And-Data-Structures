@@ -15,14 +15,17 @@ def is_that_seller(name: str) -> bool:
 def search(graph: dict, name: str) -> bool:
 	search_queue = deque()
 	search_queue += graph[name]
+	searched = []
 
 	while search_queue:
 		person = search_queue.popleft()
-		if is_that_seller(person):
-			print(f"{person} find")
-			return True
-		else:
-			search_queue += graph[person]
+		if not person in searched:
+			if is_that_seller(person):
+				print(f"{person} find")
+				return True
+			else:
+				search_queue += graph[person]
+				searched.append(person)
 	return False
 
 print(search(graph, "you"))
