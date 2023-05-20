@@ -1,4 +1,6 @@
 from collections import deque
+
+# graph implement
 graph = {}
 graph['you'] = ['alice', 'bob', 'claire']
 graph['bob'] = ['anuj', 'peggy']
@@ -9,9 +11,12 @@ graph['peggy'] = []
 graph['thom'] = []
 graph['jonny'] = []
 
+
+# find seller  node: it isn't must have
 def is_that_seller(name: str) -> bool:
 	return name[-1] == "m";
 
+# breadth first function
 def search(graph: dict, name: str) -> bool:
 	search_queue = deque()
 	search_queue += graph[name]
